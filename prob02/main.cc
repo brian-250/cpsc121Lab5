@@ -1,16 +1,25 @@
-// Please fill in below.
-// <Your name>
-// <Your section number> (e.g. CPSC 121L-01)
-// <Date>
-// <Your csu.fullerton.edu email>
-// <Your GitHub username>
+// Brian Milian
+// CPSC 121L-01
+// 2023-02-21
+// brianmilian@csu.fullerton.edu
+// @brian-250
 //
-// Lab 5-2
+// Lab 5-1
 // If it is a pair programming lab please specify partner below.
 // Partner: @peteranteater
+//
+// This program prompts the user to enter the number of
+// elements they want in a vector and the program
+// allows them to choose three values they want to
+// put in the vector. The program then return the index
+// of the smallest value in the vector.
+//
 
 #include <iomanip>
 #include <iostream>
+#include <vector>
+
+#include "calculate_avg.h"
 
 int main() {
   int num_students = 0;
@@ -25,14 +34,19 @@ int main() {
     // given number of students in the class, based on the
     // `num_students` variable. Don't forget to #include <vector>.
     // ==========================================================
-
+    double zero{0.0};
+    std::vector<double> students_gpa(num_students);
+    
     std::cout << "Enter the GPA for the students in your class (0.0 - 4.0)\n";
     for (int i = 0; i < num_students; i++) {
       // ============ YOUR CODE HERE ============
       // Store the input GPA from cin into
       // the corresponding index in the vector.
       // ========================================
+      double input{0.0};
       std::cout << "Enter the GPA for student #" << i + 1 << ": ";
+      std::cin >> input;
+      students_gpa.push_back(input);
     }
     double average = 0;
 
@@ -42,7 +56,7 @@ int main() {
     // variable. Make sure to #include "calculate_avg.h" before you
     // use the CalculateAverage function.
     // ==========================================================
-
+    average = CalculateAverage(students_gpa);
     std::cout << "Class average: " << std::setprecision(2) << std::fixed
               << average << "\n";
   }
