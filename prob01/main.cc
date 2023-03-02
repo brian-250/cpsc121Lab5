@@ -49,7 +49,7 @@ int main() {
 
   int small_index{IndexOfMinimumElement(numbers)};
   if (small_index == -1) {
-    std::cout << "-1";
+    std::cout << "-1\n";
   } else {
   std::cout << "The minimum value in your vector is at index " << small_index
             << "\n";

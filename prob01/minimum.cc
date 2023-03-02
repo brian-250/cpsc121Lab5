@@ -14,6 +14,8 @@
 // put in the vector. The program then return the index
 // of the smallest value in the vector.
 //
+#include <iostream>
+#include <vector>
 
 #include "minimum.h"
 
@@ -23,15 +25,14 @@ int IndexOfMinimumElement(std::vector<double> &input) {
   // vector, and return it. If the input vector is empty,
   // return -1.
   // ========================================================
-  int small_index{0};
-  double min{input.at(0)};
-
-  for (int i = 0; i < input.size(); i++) {
-    if (input.size() == 0) {
+  if (input.empty()) {
       return -1;
   }
-    if (input.at(i) < min) {
-      min = input.at(i);
+  int small_index{0};
+  double minimun_value{input.at(0)};
+  for (int i = 1; i < input.size(); i++) {
+    if (input.at(i) < minimun_value) {
+      minimun_value = input.at(i);
       small_index = i;
     }
   }

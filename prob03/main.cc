@@ -38,12 +38,12 @@ int main() {
   // Hint: you can use a range based for loop to iterate over
   // characters in a string: for (char c : text) {...}
   // ==========================================================
-
   std::map<char, int> my_map;
   for (char i : text) {
+    if (my_map.count(i) == 0) {
     my_map.insert({i, 1});
-    if (my_map.at(i) > 0) {
-      my_map.at(i)++;
+    } else {
+      my_map.at(i) +=1;
     }
   }
   // The code block in a while loop will be executed as long as
@@ -71,12 +71,11 @@ int main() {
     // and print out 0 if it is not in your map.
     // ==============================================
     if (my_map.count(input) == 0) {
-      std::cout << "The letter " << input << " is not currently a key in the map";
-    if (my_map.count(input) > 0) {
-      std::cout << my_map.at(input);
+      std::cout << "The letter " << input << " is not currently a key in the map.\n";
+      } else {
+      std::cout << "The character " << input << " appears " << my_map.at(input) << " times.\n";
     }
   }
   std::cout << "Goodbye!" << std::endl;
   return 0;
-  }
 }
