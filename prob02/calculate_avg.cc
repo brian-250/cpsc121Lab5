@@ -23,9 +23,14 @@ double CalculateAverage(const std::vector<double> &student_grades) {
   // based on the input vector containing student GPAs.
   // Hint: you may want to use a range based loop!
   // ==================================================
-  double storer{0.0};
+  double size = student_grades.size();
+  if (student_grades.empty()) {
+    return 0;
+  }
+
+  double storer = 0.0;
   for (double i : student_grades) {
     storer = storer + i;
   }
-  return (storer / double(student_grades.size()));
+  return storer / size;
 }

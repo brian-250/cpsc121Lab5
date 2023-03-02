@@ -1,3 +1,4 @@
+
 #include <vector>
 
 // Returns the index of the smallest element in the vector,

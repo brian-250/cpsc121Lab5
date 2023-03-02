@@ -36,7 +36,7 @@ int main() {
     // ==========================================================
     double zero{0.0};
     std::vector<double> students_gpa(num_students);
-    
+
     std::cout << "Enter the GPA for the students in your class (0.0 - 4.0)\n";
     for (int i = 0; i < num_students; i++) {
       // ============ YOUR CODE HERE ============
@@ -46,7 +46,7 @@ int main() {
       double input{0.0};
       std::cout << "Enter the GPA for student #" << i + 1 << ": ";
       std::cin >> input;
-      students_gpa.push_back(input);
+      students_gpa.at(i) = input;
     }
     double average = 0;
 

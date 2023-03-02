@@ -26,10 +26,10 @@ int IndexOfMinimumElement(std::vector<double> &input) {
   int small_index{0};
   double min{input.at(0)};
 
-  if (input.empty()) {
-    return -1;
-  }
   for (int i = 0; i < input.size(); i++) {
+    if (input.size() == 0) {
+      return -1;
+  }
     if (input.at(i) < min) {
       min = input.at(i);
       small_index = i;

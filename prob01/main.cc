@@ -25,9 +25,6 @@ int main() {
   int size = 0;
   std::cout << "How many elements? ";
   std::cin >> size;
-  if (size == 0) {
-    return -1;
-  }
 
   // Construct a vector of doubles with the given size.
   // This initializes all the elements in the vector to the
@@ -51,6 +48,10 @@ int main() {
   // ========================================================
 
   int small_index{IndexOfMinimumElement(numbers)};
+  if (small_index == -1) {
+    std::cout << "-1";
+  } else {
   std::cout << "The minimum value in your vector is at index " << small_index
             << "\n";
+    }
 }
