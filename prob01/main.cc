@@ -11,7 +11,7 @@
 // This program prompts the user to enter the number of
 // elements they want in a vector and the program
 // allows them to choose three values they want to
-// put in the vector. The program then return the index
+// put in the vector. The program then returns the index
 // of the smallest value in the vector.
 //
 
@@ -51,7 +51,8 @@ int main() {
   if (small_index == -1) {
     std::cout << "-1\n";
   } else {
-  std::cout << "The minimum value in your vector is at index " << small_index
-            << "\n";
-    }
+    std::cout << "The minimum value in your vector is at index " << small_index
+
+              << "\n";
+  }
 }

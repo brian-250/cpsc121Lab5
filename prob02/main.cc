@@ -4,15 +4,14 @@
 // brianmilian@csu.fullerton.edu
 // @brian-250
 //
-// Lab 5-1
+// Lab 5-2
 // If it is a pair programming lab please specify partner below.
 // Partner: @peteranteater
 //
-// This program prompts the user to enter the number of
-// elements they want in a vector and the program
-// allows them to choose three values they want to
-// put in the vector. The program then return the index
-// of the smallest value in the vector.
+// This program prompts the user to enter the number
+// of students in their class. Then the program asks
+// the user to input the GPA of every student. The
+// program finds the average of all the GPAs.
 //
 
 #include <iomanip>

@@ -11,13 +11,13 @@
 // This program prompts the user to enter the number of
 // elements they want in a vector and the program
 // allows them to choose three values they want to
-// put in the vector. The program then return the index
+// put in the vector. The program then returns the index
 // of the smallest value in the vector.
 //
+#include "minimum.h"
+
 #include <iostream>
 #include <vector>
-
-#include "minimum.h"
 
 int IndexOfMinimumElement(std::vector<double> &input) {
   // ==================== YOUR CODE HERE ====================
@@ -26,7 +26,7 @@ int IndexOfMinimumElement(std::vector<double> &input) {
   // return -1.
   // ========================================================
   if (input.empty()) {
-      return -1;
+    return -1;
   }
   int small_index{0};
   double minimun_value{input.at(0)};

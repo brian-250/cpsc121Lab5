@@ -4,20 +4,19 @@
 // brianmilian@csu.fullerton.edu
 // @brian-250
 //
-// Lab 5-1
+// Lab 5-3
 // If it is a pair programming lab please specify partner below.
 // Partner: @peteranteater
 //
-// This program prompts the user to enter the number of
-// elements they want in a vector and the program
-// allows them to choose three values they want to
-// put in the vector. The program then return the index
-// of the smallest value in the vector.
+// This program prompts the user to enter a sentence
+// and it tracks how many times all the letters in the sentence
+// repeat. Then the program asks the user which letter they'd like
+// to know the count of.
 //
 
 #include <iostream>
-#include <string>
 #include <map>
+#include <string>
 
 int main() {
   std::string text;
@@ -41,9 +40,9 @@ int main() {
   std::map<char, int> my_map;
   for (char i : text) {
     if (my_map.count(i) == 0) {
-    my_map.insert({i, 1});
+      my_map.insert({i, 1});
     } else {
-      my_map.at(i) +=1;
+      my_map.at(i) += 1;
     }
   }
   // The code block in a while loop will be executed as long as
@@ -71,9 +70,10 @@ int main() {
     // and print out 0 if it is not in your map.
     // ==============================================
     if (my_map.count(input) == 0) {
-      std::cout << "The letter " << input << " is not currently a key in the map.\n";
-      } else {
-      std::cout << "The character " << input << " appears " << my_map.at(input) << " times.\n";
+      std::cout << "The character " << input << " appears 0 times.\n";
+    } else {
+      std::cout << "The character " << input << " appears " << my_map.at(input)
+                << " times.\n";
     }
   }
   std::cout << "Goodbye!" << std::endl;
